@@ -1,5 +1,5 @@
 name: expense
-description: "A new Flutter project."
+description: "Repo that handles expenses"
 
 publish_to: "none"
 version: 1.0.0+1
@@ -12,6 +12,8 @@ dependencies:
   font_awesome_flutter: ^10.8.0
   flutter:
     sdk: flutter
+  intl: ^0.20.0
+  flutter_colorpicker: ^1.1.0
 
   cupertino_icons: ^1.0.8
 
@@ -23,3 +25,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/

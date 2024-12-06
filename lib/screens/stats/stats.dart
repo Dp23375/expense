@@ -24,9 +24,9 @@ class StatScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12)),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(12, 20, 12, 12),
-                  child: const MyChart(),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(12, 20, 12, 12),
+                  child: MyChart(),
                 ))
           ],
         ),
@@ -34,3 +34,4 @@ class StatScreen extends StatelessWidget {
     );
   }
 }
+// working

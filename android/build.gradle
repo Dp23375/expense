@@ -5,6 +5,22 @@ allprojects {
     }
 }
 
+plugins{
+    id 'com.google.gms.google-services' version '4.4.2' apply false
+}
+android.defaultConfig.externalNativeBuild.cmake {
+arguments "-DFIREBASE_CPP_SDK_DIR=$gradle.firebase_cpp_sdk_dir"
+}
+
+// # Add the dependencies for the Firebase products you want to use in your app
+// # For example, to use Analytics, Firebase Authentication, and Firebase Realtime Database
+apply from: "$gradle.firebase_cpp_sdk_dir/Android/firebase_dependencies.gradle"
+firebaseCpp.dependencies {
+  analytics
+  auth
+  database
+}
+
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
